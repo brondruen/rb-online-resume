@@ -1,0 +1,92 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 16px 48px;
+}
+
+.logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.links li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 0;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.links li button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: width 0.25s ease;
+}
+
+.links li button:hover {
+  opacity: 0.75;
+}
+
+.links li button:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 20px 24px;
+  }
+  .navbar.scrolled {
+    padding: 14px 24px;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .links {
+    gap: 20px;
+  }
+  .links li button {
+    font-size: 0.72rem;
+  }
+}

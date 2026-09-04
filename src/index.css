@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-script: 'Dancing Script', cursive;
+  --font-main: 'Raleway', sans-serif;
+  --color-dark: #1a1a1a;
+  --color-circle: rgba(30, 28, 30, 0.88);
+  --color-white: #ffffff;
+  --color-off-white: #e8e8e8;
+  --color-accent: #c4a0a0;
+  --color-text-muted: #aaaaaa;
+  --color-section-bg: #111111;
+  --color-card-bg: #1e1e1e;
+  --color-border: #2a2a2a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-section-bg);
+  color: var(--color-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

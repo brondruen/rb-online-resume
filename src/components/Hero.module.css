@@ -1,0 +1,155 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Twilight sky gradient background mimicking the screenshot */
+.bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      #c4a8b8 0%,
+      #b89eb0 8%,
+      #a08898 16%,
+      #8a7898 24%,
+      #706880 34%,
+      #5c5870 44%,
+      #484860 54%,
+      #363550 62%,
+      #242338 72%,
+      #161525 82%,
+      #0c0c18 92%,
+      #070710 100%
+    );
+}
+
+/* Subtle cloud texture using radial gradients */
+.bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 40% at 80% 25%, rgba(180,155,160,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 30% at 20% 35%, rgba(150,130,145,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 20% at 60% 55%, rgba(80,75,95,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 25% at 0% 50%, rgba(60,58,80,0.4) 0%, transparent 55%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.05) 0%,
+    rgba(0,0,0,0.1) 40%,
+    rgba(0,0,0,0.35) 75%,
+    rgba(0,0,0,0.6) 100%
+  );
+}
+
+.circle {
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(22, 20, 24, 0.88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 40px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+}
+
+.name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 1.35;
+  margin: 0 0 18px;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* Scroll indicator */
+.scrollBtn {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scrollDot {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.scrollDot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+@media (max-width: 640px) {
+  .circle {
+    width: 280px;
+    height: 280px;
+  }
+  .name {
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+  }
+  .title {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+  }
+}
