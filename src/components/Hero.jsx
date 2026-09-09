@@ -1,8 +1,8 @@
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const scrollToPortfolio = () => {
-    document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBackground = () => {
+    document.getElementById('background')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -15,12 +15,12 @@ export default function Hero() {
           RELLYN<br />BONDOC
         </h1>
         <div className={styles.divider} />
-        <p className={styles.title}>WEB DEVELOPER</p>
+        <p className={styles.title}>SOFTWARE DEVELOPER</p>
       </div>
 
       <button
         className={styles.scrollBtn}
-        onClick={scrollToPortfolio}
+        onClick={scrollToBackground}
         aria-label="Scroll down"
       >
         <span className={styles.scrollDot} />

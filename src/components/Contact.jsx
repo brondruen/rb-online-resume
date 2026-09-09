@@ -12,7 +12,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Opens default email client with prefilled content
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+    const subject = encodeURIComponent(`Online Resume Contact from ${form.name}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
     );
