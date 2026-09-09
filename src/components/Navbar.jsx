@@ -20,7 +20,7 @@ export default function Navbar() {
         Rellyn
       </div>
       <ul className={styles.links}>
-        <li><button onClick={() => scrollTo('portfolio')}>PORTFOLIO</button></li>
+        <li><button onClick={() => scrollTo('background')}>BACKGROUND</button></li>
         <li><button onClick={() => scrollTo('skills')}>SKILL</button></li>
         <li><button onClick={() => scrollTo('contact')}>CONTACT</button></li>
       </ul>

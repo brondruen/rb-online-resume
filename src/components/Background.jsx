@@ -1,17 +1,17 @@
-import styles from './Portfolio.module.css';
+import styles from './Background.module.css';
 
 const experiences = [
   {
     company: 'Spice Factory Philippines Inc.',
     role: 'Mid Angular Engineer',
-    period: 'June 2024 – Present',
+    period: 'June 2024 – August 2026',
     highlights: [
       'Engineered end-to-end features across 2–3 enterprise web applications using Angular, React.js and Next.js, optimizing data flow and system integrations.',
       'Designed and packaged a reusable, bundleable appointment booking module, enabling seamless integration across 3rd-party platforms.',
       'Developed clinical and operational admin tools, including a Subscription Management module that streamlined recurring order workflows.',
       'Spearheaded technical planning and scope refinement sessions with cross-functional teams to proactively resolve architectural edge cases.',
     ],
-    tags: ['Angular', 'React.js', 'Next.js', 'TypeScript'],
+    tags: ['Angular', 'React.js', 'Vue.js', 'Next.js', 'TypeScript'],
     current: true,
   },
   {
@@ -24,7 +24,7 @@ const experiences = [
       'Refactored legacy codebases and database queries, significantly resolving performance bottlenecks and UI inconsistencies.',
       'Collaborated via active pair programming and code reviews, reducing production bugs through proactive investigation and fixes.',
     ],
-    tags: ['Google Maps API', 'PostgreSQL', 'MySQL', 'REST APIs'],
+    tags: ['JavaScript', 'TypeScript', 'Angular', 'React Native', 'MySQL', 'Java Spring Boot', 'REST APIs'],
   },
   {
     company: 'Titus Global-Tech',
@@ -35,7 +35,7 @@ const experiences = [
       'Authored automated end-to-end test suites using Protractor, elevating code stability and release quality.',
       'Identified root causes for legacy software issues and delivered thoroughly tested bug fixes.',
     ],
-    tags: ['Sass', 'Protractor', 'HTML5', 'CSS3'],
+    tags: ['Angular', 'TypeScript', 'Sass', 'Protractor', 'HTML5', 'CSS3'],
   },
   {
     company: 'Androbotics Clark Inc.',
@@ -46,15 +46,15 @@ const experiences = [
       'Developed custom WordPress themes from scratch or by using Elementor.',
       'Collaborated with Project Managers to translate business requirements into intuitive UI/UX web designs.',
     ],
-    tags: ['WordPress', 'Elementor', 'UI/UX', 'Responsive Design'],
+    tags: ['WordPress', 'Elementor', 'UI/UX', 'Responsive Design', 'HTML5', 'CSS3', 'JavaScript'],
   },
 ];
 
-export default function Portfolio() {
+export default function Background() {
   return (
-    <section id="portfolio" className={styles.section}>
+    <section id="background" className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={styles.sectionTitle}>PORTFOLIO</h2>
+        <h2 className={styles.sectionTitle}>BACKGROUND</h2>
         <p className={styles.sectionSub}>Professional Experience</p>
 
         <div className={styles.timeline}>
@@ -62,7 +62,7 @@ export default function Portfolio() {
             <div key={i} className={styles.card}>
               <div className={styles.cardLeft}>
                 <span className={styles.period}>{exp.period}</span>
-                {exp.current && <span className={styles.badge}>Current</span>}
+                {/* {exp.current && <span className={styles.badge}>Current</span>} */}
               </div>
               <div className={styles.connector}>
                 <div className={styles.dot} />
